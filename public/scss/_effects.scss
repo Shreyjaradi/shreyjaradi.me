@@ -1,0 +1,73 @@
+#header .row {
+	z-index: 4;
+	position: relative;
+}
+
+#home__section,
+#home__section .row,
+#scroll_down,
+#work__section .row,
+#view_projects,
+#resume__section .row,
+#contact__section .row,
+#contact__section #contact_container,
+#copyright {
+	z-index: 3;
+	position: relative;
+}
+
+.slideUp {
+	display: inline-block;
+	overflow: hidden;
+
+	span {
+		position: relative;
+		display: inline-block;
+		transition: transform 0.33s;
+		padding: 6px 0;
+
+		&::before {
+			position: absolute;
+			white-space: nowrap;	
+			top: 100%;
+			content: attr(data-hover);
+  			padding: 6px 0;
+		}
+	}
+}
+
+.bounce {
+	animation: bounce 4s infinite ease-out;
+}
+
+@keyframes bounce {
+	0%, 10%, 25%, 40%, 50% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-50%);
+	}
+	30% {
+		transform: translateY(-25%);
+	}
+}
+
+#home__section h1.block-revealer {
+	display: inline-block;
+	visibility: visible;
+}
+
+.block-revealer__element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $black;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.wow { 
+	visibility: hidden;
+}
