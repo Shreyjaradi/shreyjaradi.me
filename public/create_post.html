@@ -1,0 +1,20 @@
+<!-- templates/create_post.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Blog Post</title>
+</head>
+<body>
+    <h1>Create New Blog Post</h1>
+    <form method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" required></textarea><br><br>
+        <button type="submit">Create Post</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

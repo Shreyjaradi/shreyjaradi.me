@@ -1,18 +1,21 @@
-from flask import Flask, send_from_directory
+from flask import Flask
+from models import db
+from routes import static_routes, blog_routes
+from routes import BlogPost
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+db.init_app(app)
 
-# Route to serve static files (css, js, images, etc.) from the 'public' directory
-@app.route('/<path:filename>')
-def serve_static(filename):
-    return send_from_directory('public', filename)
+# Initialize the routes
+static_routes.init_app(app)
+blog_routes.init_app(app, db)
 
-# Route to serve the index.html page from the 'public' directory
-@app.route('/')
-def serve_index():
-    return send_from_directory('public', 'index.html')
-
-# Run the app
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
 
