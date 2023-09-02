@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Add your CSS styles and links to external CSS files here -->
+</head>
+<body>
+    <h1>Welcome, {{ current_user.username }}!</h1>
+    
+    <h2>Admin Users</h2>
+    <ul>
+        {% for user in admin_users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+    
+    <!-- Add additional content and functionality for your admin dashboard here -->
+    
+    <a href="{{ url_for('logout') }}">Logout</a> <!-- Example logout link -->
+</body>
+</html>

@@ -10,7 +10,7 @@
      
      
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="{{ url_for('static', filename='../public/favicon.ico') }}" />
 	<!-— facebook open graph tags -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://shreyjaradi.me/" />
@@ -31,25 +31,25 @@
 
 
 
-    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/css/animate.css" type="text/css">
-    <link rel="stylesheet" href="/css/flexboxgrid.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../public/css/normalize.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../public/css/animate.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../public/css/flexboxgrid.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../public/css/style.min.css')}}" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png?v=BGAKO29zAl">
-	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png?v=BGAKO29zAl">
-	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=BGAKO29zAl">
-	<link rel="manifest" href="/img/favicon/site.webmanifest?v=BGAKO29zAl">
-	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg?v=BGAKO29zAl" color="#101013">
-	<link rel="shortcut icon" href="/img/favicon/favicon.ico?v=BGAKO29zAl">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='../public/img/favicon/apple-touch-icon.png?v=BGAKO29zAl')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='../public/img/favicon/favicon-32x32.png?v=BGAKO29zAl')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='../public/img/favicon/favicon-16x16.png?v=BGAKO29zAl')}}">
+	<link rel="manifest" href="{{ url_for('static', filename='../public/img/favicon/site.webmanifest?v=BGAKO29zAl')}}">
+	<link rel="mask-icon" href="{{ url_for('static', filename='../public/img/favicon/safari-pinned-tab.svg?v=BGAKO29zAl')}}" color="#101013">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='../public/img/favicon/favicon.ico?v=BGAKO29zAl')}}">
 	<meta name="apple-mobile-web-app-title" content="Shrey Jaradi">
 	<meta name="application-name" content="Shrey Jaradi">
 	<meta name="msapplication-TileColor" content="#101013">
-	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml?v=BGAKO29zAl">
+	<meta name="msapplication-config" content="{{ url_for('static', filename='../public/img/favicon/browserconfig.xml?v=BGAKO29zAl')}}">
 	<meta name="theme-color" content="#17181c">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Shrey Jaradi">
-	<meta property='og:image' content="/img/etc/linkedin.jpg">
+	<meta property='og:image' content="{{ url_for('static', filename='../public/img/etc/linkedin.jpg')}}">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50797702-1"></script>
@@ -67,32 +67,32 @@
 
 	<div id="hola">
 		<div class="loader_container">
-			<img src="/img/loading.svg">
+			<img src="{{ url_for('static', filename='../public/img/loading.svg')}}">
 		</div>
 	</div>
 
 	<div id="main_container">
 
 		<div id="swirl01" class="rellax" data-rellax-speed="-7">
-			<img src="/img/swirl01.png"
+			<img src="{{ url_for('static', filename='../public/img/swirl01.png')}}"
 				data-waterify 
 				data-waterify-speed="1" 
 				data-waterify-amount="100" 
 				data-waterify-ease="300"
-				data-waterify-displacement-url="/img/displacement_map.jpg" />
+				data-waterify-displacement-url="{{ url_for('static', filename='../public/img/displacement_map.jpg')}}" />
 		</div>
 
 		<div id="header">
 			<div class="row middle-xs">
 				<div class="col-xs-4">
-					<img src="/img/logo.svg" id="logo">
+					<img src="{{ url_for('static', filename='../public/img/logo.svg')}}" id="logo">
 				</div>
 				<div class="col-xs-8">
 					<ul class="nav">
     					<li ><a class="slideUp" href="#work"><span data-hover="Work">Work</span></a></li>
     					<li><a class="slideUp" href="#resume"><span data-hover="Resume">Resume</span></a></li>
     					<li><a class="slideUp" href="#contact"><span data-hover="Contact">Contact</span></a></li>
-						<li><a class="slideUp" href="/blog.html"><span data-hover="Blog">Blog</span></a></li>
+						<li><a class="slideUp" href="/blog"><span data-hover="Blog">Blog</span></a></li>
 					</ul>
 					<div class="menu">
 						<span></span>
@@ -269,12 +269,12 @@
 	<div id="resume__section">
 
 		<div id="swirl03" class="rellax" data-rellax-speed="3" data-rellax-percentage="0.5">
-			<img src="/img/swirl03.png"
+			<img src="{{ url_for('static', filename='../public/img/swirl03.png')}}"
 						data-waterify 
 						data-waterify-speed="1" 
 						data-waterify-amount="100" 
 						data-waterify-ease="0"
-						data-waterify-displacement-url="/img/displacement_map.jpg" />
+						data-waterify-displacement-url="{{ url_for('static', filename='../public/img/displacement_map.jpg')}}" />
 		</div>
 
 		<div class="row top-xs">
@@ -294,7 +294,7 @@
 				<h1 class="wow fadeInUp">Experience.</h1>
 				<p class="wow fadeInUp">I am a fresher. I had done internship in a startup but currently looking for an opportunity to work in IT industry.</p>
 				<div id="view_resume">
-					<a href="/pdf/shrey-jaradi.pdf" target="_blank" class="btn btn-dark wow fadeInUp"><span data-hover="View Resume »">View Resume »</span></a>
+					<a href="{{ url_for('static', filename='../public/pdf/shrey-jaradi.pdf')}}" target="_blank" class="btn btn-dark wow fadeInUp"><span data-hover="View Resume »">View Resume »</span></a>
 					<a href="https://www.linkedin.com/in/shreyjaradi/" target="_blank" class="btn btn-light wow fadeInUp" data-wow-delay=".1s"><span data-hover="View On LinkedIn »">View On LinkedIn »</span></a>
 				</div>
 			</div>
@@ -308,12 +308,12 @@
 
 		<div id="swirl_container">
 			<div id="swirl04" class="rellax" data-rellax-speed="-7" data-rellax-percentage=".5">
-				<img src="/img/swirl01.png"
+				<img src="{{ url_for('static', filename='../public/img/swirl01.png')}}"
 						data-waterify 
 						data-waterify-speed="1" 
 						data-waterify-amount="100" 
 						data-waterify-ease="0"
-						data-waterify-displacement-url="/img/displacement_map.jpg" />
+						data-waterify-displacement-url="{{ url_for('static', filename='../public/img/displacement_map.jpg')}}" />
 			</div>
 		</div>
 
@@ -392,11 +392,11 @@
 	</ul>
 </div>
 
-<script src="/js/jquery.js"></script>
+<script src="{{ url_for('static', filename='../public/js/jquery.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<script type="text/javascript" src="/js/rellax.min.js"></script>
-<script src="/js/wow.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='../public/js/rellax.min.js')}}"></script>
+<script src="{{ url_for('static', filename='../public/js/wow.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -405,13 +405,15 @@
 	var width = window.innerWidth
 	|| document.documentElement.clientWidth
 	|| document.body.clientWidth;
+
+	var waterifyScriptSrc = "{{ url_for('static', filename='../public/js/waterify.min.js') }}";
 	
 	if ( width >= 1280) {
-	document.write('<script src="/js/waterify.min.js"><\/script>');
+		document.write('<script src="' + waterifyScriptSrc + '"><\/script>');
 	}
 </script>
 
-<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='../public/js/scripts.js')}}"></script>
 
 
 </body>
